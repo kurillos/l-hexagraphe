@@ -1,0 +1,18 @@
+{{ define "main" }}
+<div class="welcome-text">
+    <h1 class="highlight-gold">{{ .Title }}</h1>
+    <div class="posts-list">
+        {{ range .Pages }}
+        <article class="post-entry">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <div class="summary">
+                {{ .Summary | truncate 150 }}
+            </div>
+            <a href="{{ .Permalink }}" class="read-more" style="color: #00f2ff; font-size: 0.9rem;">Lire la suite →</a>
+        </article>
+        {{ else }}
+        <p>Les archives sont encore scellées pour cette section...</p>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
