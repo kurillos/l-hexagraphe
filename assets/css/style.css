@@ -178,18 +178,13 @@ main img:hover {
     box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
 }
 
-.welcome-text p:first-of-type::first-letter {
+.lettrine {
     font-family: 'Cinzel', serif;
     font-size: 3.5rem;
     color: #D4AF37;
     text-shadow: 2px 2px 0px #000, 0 0 15px rgba(212, 175, 55, 0.5);
-    
-    float: left; 
-    line-height: 0.8;
-    margin-top: 0.1em;
-    
-    /* Valeur négative pour aspirer le texte vers le B */
-    margin-right: -0.2em; 
-    
-    padding-right: 0.1em;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    margin-right: -0.05em;
 }
