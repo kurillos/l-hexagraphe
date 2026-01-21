@@ -1,7 +1,7 @@
-baseURL = '/'
+baseURL = 'https://l-hexagraphe.netlify.app/'
 languageCode = 'fr-fr'
 title = "L'Hexagraphe"
 theme = 'ananke'
 
-[staticDir]
-  static = ['static']
+# Supprime l'ancien bloc [staticDir] et mets juste ça si tu veux le préciser :
+staticDir = ['static']
