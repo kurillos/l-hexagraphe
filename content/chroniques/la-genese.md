@@ -1,6 +1,6 @@
 ---
 title: La genèse
-date: 2026-01-21T17:13:00.000+01:00
+date: 2025-01-21T17:13:00.000+01:00
 description: Présentation
 ---
 Bienvenue à toi curieux ou aventurier tenter par les trésors rutilants du jeu de rôle.
