@@ -13,7 +13,7 @@ body {
     font-family: 'Lora', serif;
     color: var(--text-color);
     /* L'image de la bibliothèque en fond fixe */
-    background: url('/images/bg-library.jpg') no-repeat center center fixed;
+    background: url('/images/bg-library.jpg') no-repeat center center fixed !important;
     background-size: cover;
 }
 
