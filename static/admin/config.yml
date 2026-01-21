@@ -1,19 +1,18 @@
 backend:
   name: git-gateway
-  branch: main # Vérifie que ta branche s'appelle bien main
+  branch: main
 
-media_folder: "static/images" # Où seront stockées tes images
+media_folder: "static/images"
 public_folder: "/images"
 
 collections:
   - name: "blog"
-    label: "Articles de Blog"
+    label: "Articles de JDR"
     folder: "content/posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date de publication", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Brouillon", name: "draft", widget: "boolean", default: false }
-      - { label: "Contenu", name: "body", widget: "markdown" }
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Corps du texte", name: "body", widget: "markdown"}
