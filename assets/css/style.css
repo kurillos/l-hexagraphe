@@ -188,3 +188,30 @@ main img:hover {
     margin-top: 0.22em;
     margin-right: -0.05em;
 }
+
+/* Style des cartes dans les listes d'articles */
+.post-entry {
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 3px solid #D4AF37; /* Une barre dorée sur le côté */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.post-entry:hover {
+    border-left-color: #00f2ff; /* Elle devient cyan au survol */
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.post-entry h2 a {
+    color: #D4AF37;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+}
+
+.post-entry .summary {
+    color: #c0c0c0;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
