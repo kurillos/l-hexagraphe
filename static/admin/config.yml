@@ -1,7 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-
+  identity_url: "https://l-hexagraphe.netlify.app/.netlify/identity"
+  
 media_folder: "static/images"
 public_folder: "/images"
 
