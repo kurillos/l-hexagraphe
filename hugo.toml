@@ -5,3 +5,8 @@ theme = 'ananke'
 
 # Supprime l'ancien bloc [staticDir] et mets juste ça si tu veux le préciser :
 staticDir = ['static']
+
+[[menu.main]]
+    name = "Chroniques"
+    url = "/chroniques/"
+    weight = 1

@@ -1,3 +1,4 @@
 ---
 title: "Chroniques"
+layout: "list"
 ---
