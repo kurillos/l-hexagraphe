@@ -95,3 +95,43 @@ footer {
     font-size: 0.9rem;
     letter-spacing: 2px;
 }
+
+/* Container de bienvenue */
+.welcome-container {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid rgba(0, 242, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+/* Titre de bienvenue avec effet de clignotement léger (booting) */
+.welcome-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    animation: pulse-cyan 3s infinite;
+}
+
+@keyframes pulse-cyan {
+    0% { opacity: 0.8; text-shadow: 0 0 10px rgba(0, 242, 255, 0.5); }
+    50% { opacity: 1; text-shadow: 0 0 20px rgba(0, 242, 255, 0.8); }
+    100% { opacity: 0.8; text-shadow: 0 0 10px rgba(0, 242, 255, 0.5); }
+}
+
+/* Mise en avant de mots clés */
+.highlight-gold { color: #D4AF37; font-weight: bold; }
+.highlight-cyan { color: #00f2ff; text-shadow: 0 0 5px rgba(0, 242, 255, 0.5); }
+
+/* Séparateurs style Runes / Lignes */
+.rune-separator {
+    height: 2px;
+    width: 60%;
+    margin: 20px auto;
+    background: linear-gradient(90deg, transparent, #00f2ff, transparent);
+    opacity: 0.5;
+}
+
+.welcome-text p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
