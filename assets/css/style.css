@@ -178,15 +178,16 @@ main img:hover {
     box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
 }
 
-/* La première lettre du premier paragraphe de chaque article */
 .welcome-text p:first-of-type::first-letter {
     font-family: 'Cinzel', serif;
-    float: left;
     font-size: 3.5rem;
-    line-height: 1;
-    padding-top: 4px;
-    padding-right: 8px;
-    padding-left: 3px;
     color: #D4AF37;
-    text-shadow: 2px 2px 0px #000, 0 0 10px rgba(212, 175, 55, 0.5);
+    text-shadow: 2px 2px 0px #000, 0 0 15px rgba(212, 175, 55, 0.5);
+    
+    /* On vire le float et on ajuste l'alignement */
+    float: left; 
+    line-height: 0.8;
+    margin-top: 0.1em;
+    margin-right: 0.05em; /* Un espace minuscule pour ne pas toucher le 'i' */
+    margin-left: -0.05em; /* Rapporter légèrement vers la gauche si besoin */
 }
