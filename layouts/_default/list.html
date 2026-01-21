@@ -2,7 +2,7 @@
 <div class="welcome-text">
     <h1 class="highlight-gold">{{ .Title }}</h1>
     <div class="posts-list">
-        {{ range .Pages }}
+        {{ range .RegularPages }}
         <article class="post-entry">
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <div class="summary">
