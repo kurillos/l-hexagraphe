@@ -1,9 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main
+  identity_url: "https://l-hexagraphe.netlify.app/.netlify/identity"
+  gateway_url: "https://l-hexagraphe.netlify.app/.netlify/git"
+
+media_folder: "static/images"
+public_folder: "/images"
+
 collections:
-  - name: "chroniques"         # On change 'blog' en 'chroniques'
-    label: "Articles de JDR"
-    folder: "content/chroniques" # On pointe vers ton nouveau dossier
+  - name: "chroniques"
+    label: "Chroniques"
+    folder: "content/chroniques"
     create: true
-    slug: "{{slug}}"           # Plus simple pour les URLs
+    slug: "{{slug}}"
     fields:
       - {label: "Titre", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "datetime"}
