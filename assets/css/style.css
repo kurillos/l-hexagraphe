@@ -1,78 +1,97 @@
-/* Importation de polices : Cinzel pour le côté antique, Roboto Mono pour le côté précis/cyan */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Roboto+Mono:wght@400;700&display=swap');
 
 body {
-    background-color: #0a0a0b; /* Fond sombre profond */
-    color: #C0C0C0; /* Texte Argenté pour une lecture reposante */
-    font-family: 'Roboto Mono', monospace; /* Look "écritures techniques/mystiques" */
+    background-color: #050506; /* Noir encore plus profond */
+    color: #b0c4de; /* Argenté avec une pointe de bleu (SteelBlue) */
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    border-top: 4px solid #D4AF37; /* Rappel doré subtil en haut */
+    line-height: 1.6;
 }
 
-/* Le Titre Principal */
+/* HEADER - L'OR PRESTIGIEUX */
+header h1 {
+    text-align: center;
+    padding: 60px 0 20px 0;
+}
+
 header h1 a {
     font-family: 'Cinzel', serif;
-    color: #D4AF37; /* Doré */
+    color: #D4AF37;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 5px;
-    font-size: 2.5rem;
-    display: block;
-    text-align: center;
-    padding: 40px 0;
-    text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    letter-spacing: 8px;
+    font-size: 3rem;
+    /* Lueur dorée subtile */
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.4), 0 0 40px rgba(212, 175, 55, 0.1);
 }
 
-/* Conteneur principal */
+/* MAIN CONTENT */
 main {
-    max-width: 900px;
+    max-width: 850px;
     margin: 0 auto;
-    padding: 20px;
-    flex: 1;
+    padding: 40px 20px;
 }
 
-/* Les titres dans les articles (H2, H3) */
+/* TITRES EN CYAN LUMINEUX (Effet Rune) */
 h2, h3 {
-    color: #00CED1; /* Cyan pour faire ressortir les sections */
+    color: #00f2ff; /* Cyan plus vif */
     font-family: 'Cinzel', serif;
-    border-bottom: 1px solid rgba(0, 206, 209, 0.2);
-    padding-bottom: 5px;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    /* L'effet de lueur (Glow) */
+    text-shadow: 0 0 10px rgba(0, 242, 255, 0.7), 0 0 20px rgba(0, 242, 255, 0.3);
+    border-bottom: 1px dashed rgba(0, 242, 255, 0.3);
+    display: inline-block;
+    padding-right: 20px;
 }
 
-/* Liens et accents */
+/* TEXTE ARGENTÉ */
+p {
+    color: #c0c0c0;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* LIENS */
 a {
-    color: #00CED1;
-    transition: 0.3s;
+    color: #00f2ff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
 a:hover {
-    color: #D4AF37; /* Le lien devient doré au survol */
-    text-shadow: 0 0 8px #D4AF37;
+    color: #D4AF37;
+    border-bottom: 1px solid #D4AF37;
+    text-shadow: 0 0 10px #D4AF37;
 }
 
-/* Le bouton Admin style "Ligne de commande" */
+/* BOUTON ADMIN STYLE TERMINAL */
 .admin-button {
     display: inline-block;
-    border: 1px solid #00CED1;
-    color: #00CED1;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    margin-top: 30px;
-    transition: all 0.3s;
+    border: 2px solid #00f2ff;
+    color: #00f2ff;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 40px;
+    box-shadow: inset 0 0 10px rgba(0, 242, 255, 0.2), 0 0 15px rgba(0, 242, 255, 0.2);
+    transition: all 0.4s ease;
 }
 
 .admin-button:hover {
-    background-color: rgba(0, 206, 209, 0.1);
-    box-shadow: 0 0 10px #00CED1;
+    background-color: #00f2ff;
+    color: #050506;
+    box-shadow: 0 0 30px #00f2ff;
 }
 
 footer {
     text-align: center;
-    padding: 40px;
-    color: #555; /* Argenté très sombre */
-    font-size: 0.8rem;
+    padding: 60px;
+    color: #444;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
 }
