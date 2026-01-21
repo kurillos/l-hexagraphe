@@ -3,10 +3,16 @@ languageCode = 'fr-fr'
 title = "L'Hexagraphe"
 theme = 'ananke'
 
-# Supprime l'ancien bloc [staticDir] et mets juste ça si tu veux le préciser :
-staticDir = ['static']
+# Indique au thème Ananke d'utiliser ton fichier CSS personnalisé
+[params]
+  custom_css = ["css/style.css"]
 
 [[menu.main]]
     name = "Chroniques"
     url = "/chroniques/"
     weight = 1
+
+[[menu.main]]
+    name = "L'Univers"
+    url = "/univers/"
+    weight = 2
