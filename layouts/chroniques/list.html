@@ -2,7 +2,7 @@
 <div class="welcome-text">
     <h1 class="highlight-gold">{{ .Title }}</h1>
     <div class="posts-list">
-        {{ range (where .Site.RegularPages "Section" "posts") }}
+        {{ range .Pages }}
         <article class="post-entry">
             <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
             <div class="summary">
@@ -11,7 +11,7 @@
             <a href="{{ .Permalink }}" class="read-more" style="color: #00f2ff; font-size: 0.9rem;">Lire la suite →</a>
         </article>
         {{ else }}
-        <p>Les archives sont encore scellées... (Vérifiez le dossier content/posts/)</p>
+        <p>Les archives sont encore scellées...</p>
         {{ end }}
     </div>
 </div>
