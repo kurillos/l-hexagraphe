@@ -7,7 +7,7 @@
     --text-color: #e0e0e0;
 }
 
-body {
+html body {
     margin: 0;
     padding: 0;
     font-family: 'Lora', serif;
