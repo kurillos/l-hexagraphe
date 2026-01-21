@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <div style="text-align: center; padding: 50px; color: #D4AF37;">
+    <h1>L'Hexagraphe</h1>
+    <p>Le grimoire est en cours d'écriture...</p>
+    <button id="login-button" style="padding: 10px 20px; cursor: pointer;">Connexion Admin</button>
+  </div>
+  
+  <script>
+    document.getElementById('login-button').onclick = function() {
+      netlifyIdentity.open();
+    };
+  </script>
+{{ end }}
