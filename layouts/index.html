@@ -1,19 +1,51 @@
 {{ define "main" }}
-<div class="welcome-container">
-    <div class="rune-separator"></div>
+<div class="home-container" style="background: #050505; color: white; padding-bottom: 50px;">
     
-    <h2 class="welcome-title">Initialisation du Grimoire...</h2>
-    
-    <div class="welcome-text">
-        <p><span class="lettrine">B</span>ienvenue, Voyageur, dans les archives de <span class="highlight-gold">L'Hexagraphe</span>.</p>
-        <p>Ici sont consignés les fragments de mondes, les chroniques de sessions et les artefacts ludiques nés de l'imaginaire.</p>
-        <p>Explorez les sections ci-dessous pour découvrir nos derniers récits de <span class="highlight-cyan">Jeux de Rôle</span>.</p>
+    <div class="home-hero" style="text-align: center; padding: 80px 20px; border-bottom: 1px solid #d4af3733;">
+        <h1 style="font-size: 4rem; color: gold; text-shadow: 0 0 20px rgba(255, 215, 0, 0.3); margin: 0;">L'HEXAGRAPHE</h1>
+        <p style="font-family: 'Georgia', serif; font-style: italic; color: #aaa; font-size: 1.2rem;">Les archives oubliées de l'Ancien Monde</p>
     </div>
 
-    <div class="action-zone">
-        <a href="/posts/" class="admin-button">Explorer les Archives</a>
-    </div>
+    <div class="home-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        
+        <section>
+            <h2 style="color: gold; border-bottom: 2px solid gold; padding-bottom: 10px; display: inline-block;">Dernières Chroniques</h2>
+            <div style="margin-top: 20px;">
+                {{ range first 3 (where .Site.RegularPages "Section" "chroniques") }}
+                <a href="{{ .Permalink }}" style="display: flex; align-items: center; text-decoration: none; color: white; margin-bottom: 20px; background: #111; border-radius: 5px; overflow: hidden; border: 1px solid #222;">
+                    {{ if .Params.image }}
+                        <img src="{{ .Params.image }}" style="width: 100px; height: 100px; object-fit: cover;">
+                    {{ else }}
+                        <div style="width: 100px; height: 100px; background: #222; display: flex; align-items: center; justify-content: center; color: #444;">No Pic</div>
+                    {{ end }}
+                    <div style="padding: 15px;">
+                        <h4 style="margin: 0; color: gold;">{{ .Title }}</h4>
+                        <p style="margin: 5px 0 0; font-size: 0.85rem; color: #ccc;">{{ .Date | lang.Format "02 Jan 2006" }}</p>
+                    </div>
+                </a>
+                {{ end }}
+            </div>
+        </section>
 
-    <div class="rune-separator bottom"></div>
+        <section>
+            <h2 style="color: gold; border-bottom: 2px solid gold; padding-bottom: 10px; display: inline-block;">Entrées du Codex</h2>
+            <div style="margin-top: 20px;">
+                {{ range first 3 (where .Site.RegularPages "Section" "codex") }}
+                <a href="{{ .Permalink }}" style="display: flex; align-items: center; text-decoration: none; color: white; margin-bottom: 20px; background: #111; border-radius: 5px; overflow: hidden; border: 1px solid #222;">
+                    {{ if .Params.image }}
+                        <img src="{{ .Params.image }}" style="width: 100px; height: 100px; object-fit: cover;">
+                    {{ else }}
+                        <div style="width: 100px; height: 100px; background: #222; display: flex; align-items: center; justify-content: center; color: #444;">📜</div>
+                    {{ end }}
+                    <div style="padding: 15px;">
+                        <h4 style="margin: 0; color: gold;">{{ .Title }}</h4>
+                        <p style="margin: 5px 0 0; font-size: 0.85rem; color: #aaa;">{{ .Params.category }}</p>
+                    </div>
+                </a>
+                {{ end }}
+            </div>
+        </section>
+
+    </div>
 </div>
 {{ end }}

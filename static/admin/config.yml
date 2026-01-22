@@ -23,3 +23,5 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Corps du texte", name: "body", widget: "markdown"}
+    media_folder: "static/images"
+    public_folder: "/images"
