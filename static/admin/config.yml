@@ -1,20 +1,25 @@
-backend:
-  name: git-gateway
-  branch: main
-  identity_url: "https://l-hexagraphe.netlify.app/.netlify/identity"
-  gateway_url: "https://l-hexagraphe.netlify.app/.netlify/git"
-
-media_folder: "static/images"
-public_folder: "/images"
-
 collections:
-  - name: "chroniques"
-    label: "Chroniques"
-    folder: "content/chroniques"
+  - name: "univers"
+    label: "L'Univers"
+    folder: "content/univers"
     create: true
     slug: "{{slug}}"
     fields:
       - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Date de Publication", name: "date", widget: "datetime"}
+      - {label: "Image de Couverture", name: "image", widget: "image", required: false}
+      - {label: "Catégorie", name: "category", widget: "select", options: ["Géographie", "Histoire", "Cultures", "Magie"]}
+      - {label: "Description Courte", name: "description", widget: "text"}
+      - {label: "Corps du texte", name: "body", widget: "markdown"}
+
+  - name: "codex"
+    label: "Le Codex"
+    folder: "content/codex"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Type de sujet", name: "category", widget: "select", options: ["Bestiaire", "Objets", "Personnages", "Règles"]}
+      - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Corps du texte", name: "body", widget: "markdown"}
