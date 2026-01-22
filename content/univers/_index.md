@@ -1,4 +1,4 @@
 ---
-title: "L'Univers"
+title: "Univers"
 type: "univers"
 ---
