@@ -1,4 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
 collections:
+  - name: "chroniques"
+    label: "Chroniques"
+    folder: "content/chroniques"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Image de Couverture", name: "image", widget: "image", required: false}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Corps", name: "body", widget: "markdown"}
+
   - name: "univers"
     label: "L'Univers"
     folder: "content/univers"
@@ -6,7 +25,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Date de Publication", name: "date", widget: "datetime"}
+      - {label: "Date", name: "date", widget: "datetime"}
       - {label: "Image de Couverture", name: "image", widget: "image", required: false}
       - {label: "Catégorie", name: "category", widget: "select", options: ["Géographie", "Histoire", "Cultures", "Magie"]}
       - {label: "Description Courte", name: "description", widget: "text"}
@@ -23,5 +42,3 @@ collections:
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Corps du texte", name: "body", widget: "markdown"}
-    media_folder: "static/images"
-    public_folder: "/images"
