@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="univers-container">
+    <h1 class="highlight-gold">{{ .Title }}</h1>
+    
+    <div class="lore-grid">
+        {{ range .Pages }}
+        <a href="{{ .Permalink }}" class="lore-card">
+            <div class="lore-card-content">
+                <h3>{{ .Title }}</h3>
+                <p>{{ .Description | truncate 100 }}</p>
+                <span class="read-more">Explorer →</span>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+    .univers-container { padding: 40px; max-width: 1200px; margin: auto; }
+    .lore-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+        gap: 20px; 
+    }
+    .lore-card { 
+        background: #1a1a1a; 
+        border: 1px solid gold; 
+        padding: 20px; 
+        text-decoration: none; 
+        color: white;
+        transition: transform 0.3s;
+    }
+    .lore-card:hover { transform: translateY(-5px); background: #252525; }
+    .highlight-gold { color: gold; text-transform: uppercase; letter-spacing: 2px; }
+</style>
+{{ end }}

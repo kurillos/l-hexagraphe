@@ -1,3 +1,4 @@
 ---
-title: "Univers"
+title: "L'Univers"
+type: "univers"
 ---
