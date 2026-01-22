@@ -16,3 +16,5 @@ theme = 'ananke'
     name = "L'Univers"
     url = "/univers/"
     weight = 2
+[permalinks]
+  chroniques = '/chroniques/:slug/'
